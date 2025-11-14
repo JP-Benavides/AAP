@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { Card } from '../components/ui/card';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Button } from '../components/ui/button';
-import { MapPin, Mail, Clock, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { useState } from "react";
+import { Card } from "../components/ui/card";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
+import { Button } from "../components/ui/button";
+import { MapPin, Mail, Clock, Phone, Instagram, Facebook, Twitter } from "lucide-react";
+import { toast } from "sonner@2.0.3";
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Message sent! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    toast.success("Message sent! We'll get back to you soon.");
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -264,12 +264,15 @@ export function ContactPage() {
           <h2 className="mb-6">Quick Links</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Join AAP', description: 'Become a member today' },
-              { title: 'Explore Clubs', description: 'Find your community' },
-              { title: 'View Events', description: 'See what\'s happening' },
-              { title: 'Resources', description: 'Access academic support' },
+              { title: "Join AAP", description: "Become a member today" },
+              { title: "Explore Clubs", description: "Find your community" },
+              { title: "View Events", description: "See what's happening" },
+              { title: "Resources", description: "Access academic support" },
             ].map((link, index) => (
-              <Card key={index} className="p-6 rounded-2xl border-gray-200 hover:shadow-lg transition-all cursor-pointer group">
+              <Card
+                key={index}
+                className="p-6 rounded-2xl border-gray-200 hover:shadow-lg transition-all cursor-pointer group"
+              >
                 <h4 className="mb-1 group-hover:text-[#57068C] transition-colors">{link.title}</h4>
                 <p className="text-sm text-gray-600">{link.description}</p>
               </Card>

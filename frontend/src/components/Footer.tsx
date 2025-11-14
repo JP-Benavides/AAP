@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Instagram, Mail, Facebook, Twitter } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Instagram, Mail, Facebook, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
@@ -18,16 +18,31 @@ export function Footer() {
               A community uplifting academic excellence and student success at NYU.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+              >
                 <Instagram size={20} />
               </a>
               <a href="mailto:aap@nyu.edu" className="hover:text-white/80 transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/80 transition-colors"
+              >
                 <Twitter size={20} />
               </a>
             </div>

@@ -1,97 +1,105 @@
-import { useState } from 'react';
-import { EventCard } from '../components/EventCard';
-import { Calendar as CalendarIcon, List, Filter } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { Card } from '../components/ui/card';
+import { useState } from "react";
+import { EventCard } from "../components/EventCard";
+import { Calendar as CalendarIcon, List, Filter } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+import { Card } from "../components/ui/card";
 
 export function EventsPage() {
-  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedMonth, setSelectedMonth] = useState('All');
+  const [viewMode, setViewMode] = useState<"list" | "calendar">("list");
+  const [selectedType, setSelectedType] = useState("All");
+  const [selectedMonth, setSelectedMonth] = useState("All");
 
-  const eventTypes = ['All', 'Workshop', 'Conference', 'Social', 'Panel', 'Festival', 'Competition'];
-  const months = ['All', 'November', 'December', 'January'];
+  const eventTypes = [
+    "All",
+    "Workshop",
+    "Conference",
+    "Social",
+    "Panel",
+    "Festival",
+    "Competition",
+  ];
+  const months = ["All", "November", "December", "January"];
 
   const events = [
     {
-      title: 'Annual AAP Summit 2024',
-      date: 'November 20, 2024',
-      time: '9:00 AM - 5:00 PM',
-      location: 'Kimmel Center',
-      type: 'Conference',
+      title: "Annual AAP Summit 2024",
+      date: "November 20, 2024",
+      time: "9:00 AM - 5:00 PM",
+      location: "Kimmel Center",
+      type: "Conference",
       featured: true,
     },
     {
-      title: 'Study Skills Workshop',
-      date: 'November 18, 2024',
-      time: '3:00 PM - 5:00 PM',
-      location: 'Bobst Library',
-      type: 'Workshop',
+      title: "Study Skills Workshop",
+      date: "November 18, 2024",
+      time: "3:00 PM - 5:00 PM",
+      location: "Bobst Library",
+      type: "Workshop",
     },
     {
-      title: 'AI Workshop Series',
-      date: 'November 22, 2024',
-      time: '6:00 PM - 8:00 PM',
-      location: 'Warren Weaver Hall',
-      type: 'Workshop',
+      title: "AI Workshop Series",
+      date: "November 22, 2024",
+      time: "6:00 PM - 8:00 PM",
+      location: "Warren Weaver Hall",
+      type: "Workshop",
     },
     {
-      title: 'International Food Festival',
-      date: 'November 25, 2024',
-      time: '12:00 PM - 4:00 PM',
-      location: 'Kimmel Center Plaza',
-      type: 'Festival',
+      title: "International Food Festival",
+      date: "November 25, 2024",
+      time: "12:00 PM - 4:00 PM",
+      location: "Kimmel Center Plaza",
+      type: "Festival",
       featured: true,
     },
     {
-      title: 'Industry Panel Discussion',
-      date: 'December 1, 2024',
-      time: '5:30 PM - 7:00 PM',
-      location: 'Kimmel Center',
-      type: 'Panel',
+      title: "Industry Panel Discussion",
+      date: "December 1, 2024",
+      time: "5:30 PM - 7:00 PM",
+      location: "Kimmel Center",
+      type: "Panel",
     },
     {
-      title: 'Winter Networking Social',
-      date: 'December 5, 2024',
-      time: '6:00 PM - 8:00 PM',
-      location: 'Rosenthal Pavilion',
-      type: 'Social',
+      title: "Winter Networking Social",
+      date: "December 5, 2024",
+      time: "6:00 PM - 8:00 PM",
+      location: "Rosenthal Pavilion",
+      type: "Social",
     },
     {
-      title: 'Research Symposium',
-      date: 'December 10, 2024',
-      time: '10:00 AM - 4:00 PM',
-      location: 'Kimmel Center',
-      type: 'Conference',
+      title: "Research Symposium",
+      date: "December 10, 2024",
+      time: "10:00 AM - 4:00 PM",
+      location: "Kimmel Center",
+      type: "Conference",
     },
     {
-      title: 'Case Competition Finals',
-      date: 'December 15, 2024',
-      time: '2:00 PM - 6:00 PM',
-      location: 'Stern School of Business',
-      type: 'Competition',
+      title: "Case Competition Finals",
+      date: "December 15, 2024",
+      time: "2:00 PM - 6:00 PM",
+      location: "Stern School of Business",
+      type: "Competition",
     },
     {
-      title: 'New Year Planning Session',
-      date: 'January 10, 2025',
-      time: '5:00 PM - 7:00 PM',
-      location: 'Kimmel Center',
-      type: 'Workshop',
+      title: "New Year Planning Session",
+      date: "January 10, 2025",
+      time: "5:00 PM - 7:00 PM",
+      location: "Kimmel Center",
+      type: "Workshop",
     },
     {
-      title: 'Leadership Development Workshop',
-      date: 'January 15, 2025',
-      time: '3:00 PM - 5:00 PM',
-      location: 'Bobst Library',
-      type: 'Workshop',
+      title: "Leadership Development Workshop",
+      date: "January 15, 2025",
+      time: "3:00 PM - 5:00 PM",
+      location: "Bobst Library",
+      type: "Workshop",
     },
   ];
 
   const filteredEvents = events.filter((event) => {
-    const matchesType = selectedType === 'All' || event.type === selectedType;
-    const eventMonth = event.date.split(' ')[0];
-    const matchesMonth = selectedMonth === 'All' || eventMonth === selectedMonth;
+    const matchesType = selectedType === "All" || event.type === selectedType;
+    const eventMonth = event.date.split(" ")[0];
+    const matchesMonth = selectedMonth === "All" || eventMonth === selectedMonth;
     return matchesType && matchesMonth;
   });
 
@@ -125,8 +133,8 @@ export function EventsPage() {
                       onClick={() => setSelectedType(type)}
                       className={`cursor-pointer rounded-full px-3 py-1 transition-all text-sm ${
                         selectedType === type
-                          ? 'bg-[#57068C] text-white hover:bg-[#7208B8]'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          ? "bg-[#57068C] text-white hover:bg-[#7208B8]"
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                       }`}
                     >
                       {type}
@@ -143,8 +151,8 @@ export function EventsPage() {
                       onClick={() => setSelectedMonth(month)}
                       className={`cursor-pointer rounded-full px-3 py-1 transition-all text-sm ${
                         selectedMonth === month
-                          ? 'bg-[#57068C] text-white hover:bg-[#7208B8]'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          ? "bg-[#57068C] text-white hover:bg-[#7208B8]"
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                       }`}
                     >
                       {month}
@@ -157,17 +165,17 @@ export function EventsPage() {
             {/* View Toggle */}
             <div className="flex gap-2">
               <Button
-                variant={viewMode === 'list' ? 'default' : 'outline'}
-                onClick={() => setViewMode('list')}
-                className={`rounded-xl ${viewMode === 'list' ? 'bg-[#57068C] hover:bg-[#7208B8]' : ''}`}
+                variant={viewMode === "list" ? "default" : "outline"}
+                onClick={() => setViewMode("list")}
+                className={`rounded-xl ${viewMode === "list" ? "bg-[#57068C] hover:bg-[#7208B8]" : ""}`}
               >
                 <List size={20} className="mr-2" />
                 List
               </Button>
               <Button
-                variant={viewMode === 'calendar' ? 'default' : 'outline'}
-                onClick={() => setViewMode('calendar')}
-                className={`rounded-xl ${viewMode === 'calendar' ? 'bg-[#57068C] hover:bg-[#7208B8]' : ''}`}
+                variant={viewMode === "calendar" ? "default" : "outline"}
+                onClick={() => setViewMode("calendar")}
+                className={`rounded-xl ${viewMode === "calendar" ? "bg-[#57068C] hover:bg-[#7208B8]" : ""}`}
               >
                 <CalendarIcon size={20} className="mr-2" />
                 Calendar
@@ -180,7 +188,7 @@ export function EventsPage() {
       {/* Events Content */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {viewMode === 'list' ? (
+          {viewMode === "list" ? (
             <>
               {/* Featured Events */}
               {featuredEvents.length > 0 && (
@@ -197,7 +205,7 @@ export function EventsPage() {
               {/* All Events */}
               <div>
                 <h2 className="mb-6">
-                  {featuredEvents.length > 0 ? 'All Events' : 'Upcoming Events'}
+                  {featuredEvents.length > 0 ? "All Events" : "Upcoming Events"}
                 </h2>
                 {regularEvents.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -211,9 +219,7 @@ export function EventsPage() {
                       <Filter className="text-gray-400" size={32} />
                     </div>
                     <h3 className="mb-2">No events found</h3>
-                    <p className="text-gray-600">
-                      Try adjusting your filters to see more events
-                    </p>
+                    <p className="text-gray-600">Try adjusting your filters to see more events</p>
                   </Card>
                 )}
               </div>
@@ -230,7 +236,7 @@ export function EventsPage() {
                   Interactive calendar view coming soon. Use list view to see all events.
                 </p>
                 <Button
-                  onClick={() => setViewMode('list')}
+                  onClick={() => setViewMode("list")}
                   className="bg-[#57068C] hover:bg-[#7208B8] rounded-xl"
                 >
                   Switch to List View

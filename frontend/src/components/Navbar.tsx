@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/clubs', label: 'Clubs' },
-    { path: '/events', label: 'Events' },
-    { path: '/resources', label: 'Resources' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
+    { path: "/", label: "Home" },
+    { path: "/clubs", label: "Clubs" },
+    { path: "/events", label: "Events" },
+    { path: "/resources", label: "Resources" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -38,16 +38,14 @@ export function Navbar() {
                 to={link.path}
                 className={`px-4 py-2 rounded-lg transition-colors ${
                   isActive(link.path)
-                    ? 'text-[#57068C] bg-[#57068C]/10'
-                    : 'text-gray-700 hover:text-[#57068C] hover:bg-gray-100'
+                    ? "text-[#57068C] bg-[#57068C]/10"
+                    : "text-gray-700 hover:text-[#57068C] hover:bg-gray-100"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Button className="ml-4 bg-[#57068C] hover:bg-[#7208B8] rounded-xl">
-              Join AAP
-            </Button>
+            <Button className="ml-4 bg-[#57068C] hover:bg-[#7208B8] rounded-xl">Join AAP</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -71,8 +69,8 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 rounded-lg transition-colors ${
                   isActive(link.path)
-                    ? 'text-[#57068C] bg-[#57068C]/10'
-                    : 'text-gray-700 hover:text-[#57068C] hover:bg-gray-100'
+                    ? "text-[#57068C] bg-[#57068C]/10"
+                    : "text-gray-700 hover:text-[#57068C] hover:bg-gray-100"
                 }`}
               >
                 {link.label}

@@ -1,5 +1,5 @@
-import { Bell, X } from 'lucide-react';
-import { useState } from 'react';
+import { Bell, X } from "lucide-react";
+import { useState } from "react";
 
 export function AnnouncementBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -16,9 +16,7 @@ export function AnnouncementBanner() {
               <span className="hidden sm:inline">
                 Join us for our Annual AAP Summit on November 20th! Registration now open.
               </span>
-              <span className="sm:hidden">
-                AAP Summit Nov 20 - Register now!
-              </span>
+              <span className="sm:hidden">AAP Summit Nov 20 - Register now!</span>
             </p>
           </div>
           <button

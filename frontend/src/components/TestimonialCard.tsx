@@ -1,5 +1,5 @@
-import { Card } from './ui/card';
-import { Quote } from 'lucide-react';
+import { Card } from "./ui/card";
+import { Quote } from "lucide-react";
 
 interface TestimonialCardProps {
   quote: string;

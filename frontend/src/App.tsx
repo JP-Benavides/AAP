@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from './components/ui/sonner';
-import { AnnouncementBanner } from './components/AnnouncementBanner';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
-import { HomePage } from './pages/HomePage';
-import { ClubsPage } from './pages/ClubsPage';
-import { ClubDetailPage } from './pages/ClubDetailPage';
-import { EventsPage } from './pages/EventsPage';
-import { ResourcesPage } from './pages/ResourcesPage';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "./components/ui/sonner";
+import { AnnouncementBanner } from "./components/AnnouncementBanner";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { HomePage } from "./pages/HomePage";
+import { ClubsPage } from "./pages/ClubsPage";
+import { ClubDetailPage } from "./pages/ClubDetailPage";
+import { EventsPage } from "./pages/EventsPage";
+import { ResourcesPage } from "./pages/ResourcesPage";
+import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
 
 export default function App() {
   return (

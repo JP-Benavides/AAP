@@ -1,24 +1,24 @@
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { ArrowRight, Download } from 'lucide-react';
-import { LucideIcon } from 'lucide-react';
+import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import { ArrowRight, Download } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface ResourceCardProps {
   title: string;
   description: string;
   icon: LucideIcon;
   actionLabel?: string;
-  actionType?: 'link' | 'download';
+  actionType?: "link" | "download";
   actionUrl?: string;
 }
 
-export function ResourceCard({ 
-  title, 
-  description, 
-  icon: Icon, 
-  actionLabel = 'Learn More',
-  actionType = 'link',
-  actionUrl = '#'
+export function ResourceCard({
+  title,
+  description,
+  icon: Icon,
+  actionLabel = "Learn More",
+  actionType = "link",
+  actionUrl = "#",
 }: ResourceCardProps) {
   return (
     <Card className="p-6 rounded-2xl border-gray-200 hover:shadow-lg transition-all group">
@@ -30,10 +30,10 @@ export function ResourceCard({
       <Button
         variant="ghost"
         className="w-full justify-between group-hover:bg-[#57068C] group-hover:text-white transition-all rounded-xl"
-        onClick={() => actionUrl && window.open(actionUrl, '_blank')}
+        onClick={() => actionUrl && window.open(actionUrl, "_blank")}
       >
         {actionLabel}
-        {actionType === 'download' ? (
+        {actionType === "download" ? (
           <Download size={16} className="ml-2" />
         ) : (
           <ArrowRight size={16} className="ml-2" />

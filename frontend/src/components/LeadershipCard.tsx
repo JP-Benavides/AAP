@@ -1,5 +1,5 @@
-import { Card } from './ui/card';
-import { Mail, Linkedin } from 'lucide-react';
+import { Card } from "./ui/card";
+import { Mail, Linkedin } from "lucide-react";
 
 interface LeadershipCardProps {
   name: string;

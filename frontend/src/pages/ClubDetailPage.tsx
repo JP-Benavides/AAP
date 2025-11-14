@@ -1,112 +1,117 @@
-import { useParams, Link } from 'react-router-dom';
-import { Button } from '../components/ui/button';
-import { LeadershipCard } from '../components/LeadershipCard';
-import { EventCard } from '../components/EventCard';
-import { Calendar, MapPin, Clock, Users, Mail, ArrowLeft } from 'lucide-react';
-import { Card } from '../components/ui/card';
+import { useParams, Link } from "react-router-dom";
+import { Button } from "../components/ui/button";
+import { LeadershipCard } from "../components/LeadershipCard";
+import { EventCard } from "../components/EventCard";
+import { Calendar, MapPin, Clock, Users, Mail, ArrowLeft } from "lucide-react";
+import { Card } from "../components/ui/card";
 
 export function ClubDetailPage() {
   const { id } = useParams<{ id: string }>();
 
   // Mock club data - in a real app, this would be fetched based on the id
   const clubData: { [key: string]: any } = {
-    'stem-scholars': {
-      name: 'STEM Scholars Society',
-      tagline: 'Advancing Science, Technology, Engineering, and Mathematics',
-      description: 'The STEM Scholars Society is dedicated to fostering a community of students passionate about science, technology, engineering, and mathematics. We provide opportunities for research collaboration, skill development, and networking with industry professionals. Our members participate in cutting-edge projects, attend workshops led by experts, and compete in national STEM competitions.',
-      category: 'Academic',
+    "stem-scholars": {
+      name: "STEM Scholars Society",
+      tagline: "Advancing Science, Technology, Engineering, and Mathematics",
+      description:
+        "The STEM Scholars Society is dedicated to fostering a community of students passionate about science, technology, engineering, and mathematics. We provide opportunities for research collaboration, skill development, and networking with industry professionals. Our members participate in cutting-edge projects, attend workshops led by experts, and compete in national STEM competitions.",
+      category: "Academic",
       memberCount: 150,
-      founded: '2018',
-      contactEmail: 'stemscholars@nyu.edu',
+      founded: "2018",
+      contactEmail: "stemscholars@nyu.edu",
       leadership: [
         {
-          name: 'Alex Rivera',
-          role: 'President',
-          bio: 'Computer Science senior passionate about AI and machine learning',
-          email: 'alex.r@nyu.edu',
+          name: "Alex Rivera",
+          role: "President",
+          bio: "Computer Science senior passionate about AI and machine learning",
+          email: "alex.r@nyu.edu",
         },
         {
-          name: 'Maya Patel',
-          role: 'Vice President',
-          bio: 'Biomedical Engineering student focused on healthcare innovation',
-          email: 'maya.p@nyu.edu',
+          name: "Maya Patel",
+          role: "Vice President",
+          bio: "Biomedical Engineering student focused on healthcare innovation",
+          email: "maya.p@nyu.edu",
         },
         {
-          name: 'Jordan Lee',
-          role: 'Events Coordinator',
-          bio: 'Mathematics major organizing workshops and competitions',
-          email: 'jordan.l@nyu.edu',
+          name: "Jordan Lee",
+          role: "Events Coordinator",
+          bio: "Mathematics major organizing workshops and competitions",
+          email: "jordan.l@nyu.edu",
         },
       ],
       meetings: {
-        regular: 'Every Wednesday, 6:00 PM - 7:30 PM',
-        location: 'Kimmel Center, Room 305',
-        officeHours: 'Thursdays, 3:00 PM - 5:00 PM',
+        regular: "Every Wednesday, 6:00 PM - 7:30 PM",
+        location: "Kimmel Center, Room 305",
+        officeHours: "Thursdays, 3:00 PM - 5:00 PM",
       },
       upcomingEvents: [
         {
-          title: 'AI Workshop Series',
-          date: 'November 22, 2024',
-          time: '6:00 PM - 8:00 PM',
-          location: 'Warren Weaver Hall',
-          type: 'Workshop',
+          title: "AI Workshop Series",
+          date: "November 22, 2024",
+          time: "6:00 PM - 8:00 PM",
+          location: "Warren Weaver Hall",
+          type: "Workshop",
         },
         {
-          title: 'Industry Panel Discussion',
-          date: 'December 1, 2024',
-          time: '5:30 PM - 7:00 PM',
-          location: 'Kimmel Center',
-          type: 'Panel',
+          title: "Industry Panel Discussion",
+          date: "December 1, 2024",
+          time: "5:30 PM - 7:00 PM",
+          location: "Kimmel Center",
+          type: "Panel",
         },
       ],
     },
-    'cultural-exchange': {
-      name: 'Cultural Exchange Club',
-      tagline: 'Celebrating Diversity and Global Understanding',
-      description: 'The Cultural Exchange Club brings together students from all backgrounds to celebrate diversity and promote cultural understanding. Through food festivals, language exchange programs, traditional performances, and cultural workshops, we create a welcoming space for students to share their heritage and learn about others.',
-      category: 'Cultural',
+    "cultural-exchange": {
+      name: "Cultural Exchange Club",
+      tagline: "Celebrating Diversity and Global Understanding",
+      description:
+        "The Cultural Exchange Club brings together students from all backgrounds to celebrate diversity and promote cultural understanding. Through food festivals, language exchange programs, traditional performances, and cultural workshops, we create a welcoming space for students to share their heritage and learn about others.",
+      category: "Cultural",
       memberCount: 200,
-      founded: '2016',
-      contactEmail: 'culturalexchange@nyu.edu',
+      founded: "2016",
+      contactEmail: "culturalexchange@nyu.edu",
       leadership: [
         {
-          name: 'Sofia Martinez',
-          role: 'President',
-          bio: 'International Relations major from Spain',
-          email: 'sofia.m@nyu.edu',
+          name: "Sofia Martinez",
+          role: "President",
+          bio: "International Relations major from Spain",
+          email: "sofia.m@nyu.edu",
         },
         {
-          name: 'Yuki Tanaka',
-          role: 'Vice President',
-          bio: 'Organizing cultural events and language exchanges',
-          email: 'yuki.t@nyu.edu',
+          name: "Yuki Tanaka",
+          role: "Vice President",
+          bio: "Organizing cultural events and language exchanges",
+          email: "yuki.t@nyu.edu",
         },
       ],
       meetings: {
-        regular: 'Every Tuesday, 5:00 PM - 6:30 PM',
-        location: 'Kimmel Center, Room 202',
-        officeHours: 'Wednesdays, 2:00 PM - 4:00 PM',
+        regular: "Every Tuesday, 5:00 PM - 6:30 PM",
+        location: "Kimmel Center, Room 202",
+        officeHours: "Wednesdays, 2:00 PM - 4:00 PM",
       },
       upcomingEvents: [
         {
-          title: 'International Food Festival',
-          date: 'November 25, 2024',
-          time: '12:00 PM - 4:00 PM',
-          location: 'Kimmel Center Plaza',
-          type: 'Festival',
+          title: "International Food Festival",
+          date: "November 25, 2024",
+          time: "12:00 PM - 4:00 PM",
+          location: "Kimmel Center Plaza",
+          type: "Festival",
         },
       ],
     },
   };
 
-  const club = clubData[id || ''] || clubData['stem-scholars'];
+  const club = clubData[id || ""] || clubData["stem-scholars"];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-[#57068C] to-[#8B4FC4] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/clubs" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+          <Link
+            to="/clubs"
+            className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
+          >
             <ArrowLeft size={20} className="mr-2" />
             Back to Clubs
           </Link>

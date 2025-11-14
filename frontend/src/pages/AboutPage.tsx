@@ -1,70 +1,78 @@
-import { LeadershipCard } from '../components/LeadershipCard';
-import { Card } from '../components/ui/card';
-import { Target, Heart, Lightbulb, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
-import { useState } from 'react';
+import { LeadershipCard } from "../components/LeadershipCard";
+import { Card } from "../components/ui/card";
+import { Target, Heart, Lightbulb, TrendingUp, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 export function AboutPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
   const leadership = [
     {
-      name: 'Dr. Sarah Williams',
-      role: 'Faculty Advisor',
-      bio: 'Professor of Education with 15 years of experience in student development',
-      email: 's.williams@nyu.edu',
+      name: "Dr. Sarah Williams",
+      role: "Faculty Advisor",
+      bio: "Professor of Education with 15 years of experience in student development",
+      email: "s.williams@nyu.edu",
     },
     {
-      name: 'Marcus Johnson',
-      role: 'AAP Director',
-      bio: 'Senior passionate about creating inclusive academic communities',
-      email: 'marcus.j@nyu.edu',
+      name: "Marcus Johnson",
+      role: "AAP Director",
+      bio: "Senior passionate about creating inclusive academic communities",
+      email: "marcus.j@nyu.edu",
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'Operations Manager',
-      bio: 'Managing day-to-day operations and student engagement initiatives',
-      email: 'emma.r@nyu.edu',
+      name: "Emma Rodriguez",
+      role: "Operations Manager",
+      bio: "Managing day-to-day operations and student engagement initiatives",
+      email: "emma.r@nyu.edu",
     },
     {
-      name: 'David Kim',
-      role: 'Events Coordinator',
-      bio: 'Organizing workshops, seminars, and community-building events',
-      email: 'david.k@nyu.edu',
+      name: "David Kim",
+      role: "Events Coordinator",
+      bio: "Organizing workshops, seminars, and community-building events",
+      email: "david.k@nyu.edu",
     },
   ];
 
   const faqs = [
     {
-      question: 'What is the Academic Achievement Program (AAP)?',
-      answer: 'AAP is a comprehensive program at NYU designed to support student academic success through clubs, resources, mentorship, and community-building activities. We provide a platform for students to connect, learn, and grow together.',
+      question: "What is the Academic Achievement Program (AAP)?",
+      answer:
+        "AAP is a comprehensive program at NYU designed to support student academic success through clubs, resources, mentorship, and community-building activities. We provide a platform for students to connect, learn, and grow together.",
     },
     {
-      question: 'How can I join AAP?',
-      answer: 'Joining AAP is easy! You can sign up through our website, attend our welcome events at the beginning of each semester, or contact us directly at aap@nyu.edu. Membership is open to all NYU students.',
+      question: "How can I join AAP?",
+      answer:
+        "Joining AAP is easy! You can sign up through our website, attend our welcome events at the beginning of each semester, or contact us directly at aap@nyu.edu. Membership is open to all NYU students.",
     },
     {
-      question: 'Are there any membership fees?',
-      answer: 'No, AAP membership is completely free for all NYU students. We believe academic support and community should be accessible to everyone.',
+      question: "Are there any membership fees?",
+      answer:
+        "No, AAP membership is completely free for all NYU students. We believe academic support and community should be accessible to everyone.",
     },
     {
-      question: 'Can I start my own club within AAP?',
-      answer: 'Yes! We encourage students to create clubs that align with their interests and the AAP mission. Contact our leadership team to learn about the club formation process and requirements.',
+      question: "Can I start my own club within AAP?",
+      answer:
+        "Yes! We encourage students to create clubs that align with their interests and the AAP mission. Contact our leadership team to learn about the club formation process and requirements.",
     },
     {
-      question: 'What types of events does AAP organize?',
-      answer: 'AAP hosts a variety of events including academic workshops, networking sessions, social gatherings, guest speaker panels, study groups, and our annual AAP Summit. Check our Events page for upcoming activities.',
+      question: "What types of events does AAP organize?",
+      answer:
+        "AAP hosts a variety of events including academic workshops, networking sessions, social gatherings, guest speaker panels, study groups, and our annual AAP Summit. Check our Events page for upcoming activities.",
     },
     {
-      question: 'How can I access tutoring services?',
-      answer: 'AAP offers free peer tutoring for various subjects. You can book tutoring sessions through our Resources page or by contacting us directly. Sessions are available both in-person and virtually.',
+      question: "How can I access tutoring services?",
+      answer:
+        "AAP offers free peer tutoring for various subjects. You can book tutoring sessions through our Resources page or by contacting us directly. Sessions are available both in-person and virtually.",
     },
     {
-      question: 'Can graduate students participate in AAP?',
-      answer: 'While AAP primarily serves undergraduate students, we welcome graduate students to participate in select events and programs. Contact us for specific opportunities available to graduate students.',
+      question: "Can graduate students participate in AAP?",
+      answer:
+        "While AAP primarily serves undergraduate students, we welcome graduate students to participate in select events and programs. Contact us for specific opportunities available to graduate students.",
     },
     {
-      question: 'How can I get involved in AAP leadership?',
-      answer: 'We hold leadership elections each spring semester. Students interested in leadership positions can apply through our website. We also offer committee positions and volunteer opportunities year-round.',
+      question: "How can I get involved in AAP leadership?",
+      answer:
+        "We hold leadership elections each spring semester. Students interested in leadership positions can apply through our website. We also offer committee positions and volunteer opportunities year-round.",
     },
   ];
 
@@ -87,33 +95,39 @@ export function AboutPage() {
             <div>
               <h2 className="mb-6">Our Mission</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                The Academic Achievement Program (AAP) is dedicated to fostering a supportive community that promotes academic excellence, personal growth, and student success at NYU. Through student-run clubs, comprehensive resources, and engaging events, we create opportunities for students to connect, learn, and thrive.
+                The Academic Achievement Program (AAP) is dedicated to fostering a supportive
+                community that promotes academic excellence, personal growth, and student success at
+                NYU. Through student-run clubs, comprehensive resources, and engaging events, we
+                create opportunities for students to connect, learn, and thrive.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We believe that every student deserves access to the tools, resources, and community support necessary to achieve their academic goals. AAP serves as a central hub where students can find mentorship, develop leadership skills, and build lasting connections.
+                We believe that every student deserves access to the tools, resources, and community
+                support necessary to achieve their academic goals. AAP serves as a central hub where
+                students can find mentorship, develop leadership skills, and build lasting
+                connections.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
                   icon: Target,
-                  title: 'Excellence',
-                  description: 'Striving for academic and personal excellence',
+                  title: "Excellence",
+                  description: "Striving for academic and personal excellence",
                 },
                 {
                   icon: Heart,
-                  title: 'Community',
-                  description: 'Building a supportive and inclusive environment',
+                  title: "Community",
+                  description: "Building a supportive and inclusive environment",
                 },
                 {
                   icon: Lightbulb,
-                  title: 'Innovation',
-                  description: 'Encouraging creative thinking and new ideas',
+                  title: "Innovation",
+                  description: "Encouraging creative thinking and new ideas",
                 },
                 {
                   icon: TrendingUp,
-                  title: 'Growth',
-                  description: 'Supporting continuous learning and development',
+                  title: "Growth",
+                  description: "Supporting continuous learning and development",
                 },
               ].map((value, index) => (
                 <Card key={index} className="p-6 rounded-2xl border-gray-200 text-center">
@@ -142,7 +156,8 @@ export function AboutPage() {
                     <h3>2015 - Founded</h3>
                   </div>
                   <p className="text-gray-700 ml-6">
-                    AAP was established by a group of students who recognized the need for a comprehensive academic support system at NYU.
+                    AAP was established by a group of students who recognized the need for a
+                    comprehensive academic support system at NYU.
                   </p>
                 </div>
                 <div>
@@ -151,7 +166,8 @@ export function AboutPage() {
                     <h3>2017 - Expansion</h3>
                   </div>
                   <p className="text-gray-700 ml-6">
-                    Grew to include 20+ student clubs and launched our peer tutoring program, serving over 500 students annually.
+                    Grew to include 20+ student clubs and launched our peer tutoring program,
+                    serving over 500 students annually.
                   </p>
                 </div>
                 <div>
@@ -160,7 +176,8 @@ export function AboutPage() {
                     <h3>2020 - Digital Transformation</h3>
                   </div>
                   <p className="text-gray-700 ml-6">
-                    Adapted to remote learning by creating virtual study groups, online workshops, and digital resource libraries.
+                    Adapted to remote learning by creating virtual study groups, online workshops,
+                    and digital resource libraries.
                   </p>
                 </div>
                 <div>
@@ -169,7 +186,8 @@ export function AboutPage() {
                     <h3>2024 - Present</h3>
                   </div>
                   <p className="text-gray-700 ml-6">
-                    Now supporting 2,000+ students across 50+ clubs with comprehensive resources, mentorship programs, and community events.
+                    Now supporting 2,000+ students across 50+ clubs with comprehensive resources,
+                    mentorship programs, and community events.
                   </p>
                 </div>
               </div>
@@ -184,28 +202,45 @@ export function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">How We Support Students</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              AAP provides comprehensive support through multiple channels to ensure every student can succeed
+              AAP provides comprehensive support through multiple channels to ensure every student
+              can succeed
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Academic Resources',
-                description: 'Free tutoring, study materials, academic advising, and workshops to enhance learning.',
-                items: ['Peer Tutoring', 'Study Guides', 'Academic Advising', 'Skill Workshops'],
+                title: "Academic Resources",
+                description:
+                  "Free tutoring, study materials, academic advising, and workshops to enhance learning.",
+                items: ["Peer Tutoring", "Study Guides", "Academic Advising", "Skill Workshops"],
               },
               {
-                title: 'Community & Clubs',
-                description: 'Student-run clubs fostering connections, leadership, and shared interests.',
-                items: ['50+ Active Clubs', 'Leadership Opportunities', 'Networking Events', 'Social Activities'],
+                title: "Community & Clubs",
+                description:
+                  "Student-run clubs fostering connections, leadership, and shared interests.",
+                items: [
+                  "50+ Active Clubs",
+                  "Leadership Opportunities",
+                  "Networking Events",
+                  "Social Activities",
+                ],
               },
               {
-                title: 'Mentorship & Growth',
-                description: 'Guidance from peers and faculty to support personal and professional development.',
-                items: ['Peer Mentorship', 'Faculty Advisors', 'Career Guidance', 'Leadership Training'],
+                title: "Mentorship & Growth",
+                description:
+                  "Guidance from peers and faculty to support personal and professional development.",
+                items: [
+                  "Peer Mentorship",
+                  "Faculty Advisors",
+                  "Career Guidance",
+                  "Leadership Training",
+                ],
               },
             ].map((pillar, index) => (
-              <Card key={index} className="p-6 rounded-2xl border-gray-200 hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="p-6 rounded-2xl border-gray-200 hover:shadow-lg transition-shadow"
+              >
                 <h3 className="mb-3">{pillar.title}</h3>
                 <p className="text-gray-600 mb-4">{pillar.description}</p>
                 <ul className="space-y-2">
@@ -244,9 +279,7 @@ export function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600">
-              Find answers to common questions about AAP
-            </p>
+            <p className="text-gray-600">Find answers to common questions about AAP</p>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (

@@ -1,69 +1,80 @@
-import { ResourceCard } from '../components/ResourceCard';
-import { Book, Users, GraduationCap, FileText, Video, Lightbulb, Calendar, MessageCircle } from 'lucide-react';
+import { ResourceCard } from "../components/ResourceCard";
+import {
+  Book,
+  Users,
+  GraduationCap,
+  FileText,
+  Video,
+  Lightbulb,
+  Calendar,
+  MessageCircle,
+} from "lucide-react";
 
 export function ResourcesPage() {
   const academicResources = [
     {
-      title: 'Study Guides',
-      description: 'Comprehensive study materials and guides for various courses and subjects.',
+      title: "Study Guides",
+      description: "Comprehensive study materials and guides for various courses and subjects.",
       icon: Book,
-      actionLabel: 'Access Guides',
-      actionType: 'link' as const,
+      actionLabel: "Access Guides",
+      actionType: "link" as const,
     },
     {
-      title: 'Tutoring Services',
-      description: 'Free peer tutoring sessions for math, science, writing, and more.',
+      title: "Tutoring Services",
+      description: "Free peer tutoring sessions for math, science, writing, and more.",
       icon: Users,
-      actionLabel: 'Book a Session',
-      actionType: 'link' as const,
+      actionLabel: "Book a Session",
+      actionType: "link" as const,
     },
     {
-      title: 'Academic Advising',
-      description: 'One-on-one guidance for course selection, major requirements, and academic planning.',
+      title: "Academic Advising",
+      description:
+        "One-on-one guidance for course selection, major requirements, and academic planning.",
       icon: GraduationCap,
-      actionLabel: 'Schedule Advising',
-      actionType: 'link' as const,
+      actionLabel: "Schedule Advising",
+      actionType: "link" as const,
     },
   ];
 
   const learningResources = [
     {
-      title: 'Workshop Materials',
-      description: 'Presentations, handouts, and recordings from past AAP workshops.',
+      title: "Workshop Materials",
+      description: "Presentations, handouts, and recordings from past AAP workshops.",
       icon: FileText,
-      actionLabel: 'Download Materials',
-      actionType: 'download' as const,
+      actionLabel: "Download Materials",
+      actionType: "download" as const,
     },
     {
-      title: 'Video Library',
-      description: 'Educational videos covering study skills, time management, and academic success.',
+      title: "Video Library",
+      description:
+        "Educational videos covering study skills, time management, and academic success.",
       icon: Video,
-      actionLabel: 'Watch Videos',
-      actionType: 'link' as const,
+      actionLabel: "Watch Videos",
+      actionType: "link" as const,
     },
     {
-      title: 'Research Opportunities',
-      description: 'Connect with faculty and explore undergraduate research programs.',
+      title: "Research Opportunities",
+      description: "Connect with faculty and explore undergraduate research programs.",
       icon: Lightbulb,
-      actionLabel: 'Explore Research',
-      actionType: 'link' as const,
+      actionLabel: "Explore Research",
+      actionType: "link" as const,
     },
   ];
 
   const supportResources = [
     {
-      title: 'Mentorship Program',
-      description: 'Connect with upperclassmen mentors for guidance and support.',
+      title: "Mentorship Program",
+      description: "Connect with upperclassmen mentors for guidance and support.",
       icon: MessageCircle,
-      actionLabel: 'Find a Mentor',
-      actionType: 'link' as const,
+      actionLabel: "Find a Mentor",
+      actionType: "link" as const,
     },
     {
-      title: 'Event Calendar',
-      description: 'Stay updated on workshops, study sessions, and social events.',
+      title: "Event Calendar",
+      description: "Stay updated on workshops, study sessions, and social events.",
       icon: Calendar,
-      actionLabel: 'View Calendar',
-      actionType: 'link' as const,
+      actionLabel: "View Calendar",
+      actionType: "link" as const,
     },
   ];
 
@@ -118,9 +129,7 @@ export function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="mb-2">Support & Community</h2>
-            <p className="text-gray-600">
-              Connect with peers and access mentorship opportunities
-            </p>
+            <p className="text-gray-600">Connect with peers and access mentorship opportunities</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {supportResources.map((resource, index) => (
@@ -135,29 +144,25 @@ export function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="mb-2">Quick Links</h2>
-            <p className="text-gray-600">
-              Important resources and external services
-            </p>
+            <p className="text-gray-600">Important resources and external services</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'NYU Library', url: '#' },
-              { title: 'Writing Center', url: '#' },
-              { title: 'Career Services', url: '#' },
-              { title: 'Health & Wellness', url: '#' },
-              { title: 'Financial Aid', url: '#' },
-              { title: 'Student Portal', url: '#' },
-              { title: 'Course Catalog', url: '#' },
-              { title: 'Academic Calendar', url: '#' },
+              { title: "NYU Library", url: "#" },
+              { title: "Writing Center", url: "#" },
+              { title: "Career Services", url: "#" },
+              { title: "Health & Wellness", url: "#" },
+              { title: "Financial Aid", url: "#" },
+              { title: "Student Portal", url: "#" },
+              { title: "Course Catalog", url: "#" },
+              { title: "Academic Calendar", url: "#" },
             ].map((link, index) => (
               <a
                 key={index}
                 href={link.url}
                 className="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-[#57068C] hover:bg-white transition-all group"
               >
-                <p className="group-hover:text-[#57068C] transition-colors">
-                  {link.title}
-                </p>
+                <p className="group-hover:text-[#57068C] transition-colors">{link.title}</p>
               </a>
             ))}
           </div>

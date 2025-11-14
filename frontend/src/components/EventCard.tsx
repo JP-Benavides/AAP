@@ -1,7 +1,7 @@
-import { Calendar, MapPin, Clock } from 'lucide-react';
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
+import { Calendar, MapPin, Clock } from "lucide-react";
+import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 interface EventCardProps {
   title: string;
@@ -15,7 +15,9 @@ interface EventCardProps {
 
 export function EventCard({ title, date, time, location, type, image, featured }: EventCardProps) {
   return (
-    <Card className={`overflow-hidden hover:shadow-lg transition-all duration-300 rounded-2xl group ${featured ? 'border-[#57068C] border-2' : 'border-gray-200'}`}>
+    <Card
+      className={`overflow-hidden hover:shadow-lg transition-all duration-300 rounded-2xl group ${featured ? "border-[#57068C] border-2" : "border-gray-200"}`}
+    >
       <div className="aspect-video bg-gradient-to-br from-[#57068C]/10 to-[#8B4FC4]/10 relative overflow-hidden">
         {image ? (
           <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -49,9 +51,7 @@ export function EventCard({ title, date, time, location, type, image, featured }
             <span>{location}</span>
           </div>
         </div>
-        <Button className="w-full bg-[#57068C] hover:bg-[#7208B8] rounded-xl">
-          RSVP
-        </Button>
+        <Button className="w-full bg-[#57068C] hover:bg-[#7208B8] rounded-xl">RSVP</Button>
       </div>
     </Card>
   );
